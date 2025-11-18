@@ -18,8 +18,6 @@ jobs:
     runs-on: ubuntu:22.04
     container:
       image: jakobmifflin2005/quiz9:latest
-      # all dependencies (pytest) are already in this docker image hosted as public image in YOUR Docker Hub account
-
     steps:
       - name: Check out code
         uses: actions/checkout@v4
