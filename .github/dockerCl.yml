@@ -17,7 +17,7 @@ jobs:
   test-in-container:
     runs-on: ubuntu-latest
     container:
-      image: jakobmifflin2005/sad_faraday:ubuntu:22.04
+      image: jakobmifflin2005/quiz9:latest
       # all dependencies (pytest) are already in this docker image hosted as public image in YOUR Docker Hub account
 
     steps:
