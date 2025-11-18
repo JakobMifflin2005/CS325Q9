@@ -1,0 +1,28 @@
+name: Python CI
+
+
+
+
+# "on" a push to the branch main this CI pipeline will start
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+
+
+
+jobs:
+  test-in-container:
+    runs-on: ubuntu-latest
+    container:
+      image: jakobmifflin2005/sad_faraday:ubuntu:22.04
+      # all dependencies (pytest) are already in this docker image hosted as public image in YOUR Docker Hub account
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Run tests in container
+        run: pytest
